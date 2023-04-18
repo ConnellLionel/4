@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
 # 定义 UUID 及伪装路径、哪吒面板参数，请自行修改. (注意:伪装路径以 / 符号开始,为避免不必要的麻烦,请不要使用特殊符号.)
-UUID='de04add9-5c68-8bab-950c-08cd5320df18'
-VMESS_WSPATH='/vmess'
-VLESS_WSPATH='/vless'
-TROJAN_WSPATH='/trojan'
-SS_WSPATH='/shadowsocks'
-NEZHA_SERVER=''
-NEZHA_PORT=''
-NEZHA_KEY=''
+UUID='a9b9c3ca-f294-4704-b013-98ba227174ca'
+VMESS_WSPATH='/a9b9c3ca-f294-4704-b013-98ba227174ca-vmess'
+VLESS_WSPATH='/a9b9c3ca-f294-4704-b013-98ba227174ca-vless'
+TROJAN_WSPATH='/a9b9c3ca-f294-4704-b013-98ba227174ca-trojan'
+SS_WSPATH='/a9b9c3ca-f294-4704-b013-98ba227174ca-shadowsocks'
 sed -i "s#UUID#$UUID#g;s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g;s#TROJAN_WSPATH#${TROJAN_WSPATH}#g;s#SS_WSPATH#${SS_WSPATH}#g" config.json
 sed -i "s#VMESS_WSPATH#${VMESS_WSPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g;s#TROJAN_WSPATH#${TROJAN_WSPATH}#g;s#SS_WSPATH#${SS_WSPATH}#g" /etc/nginx/nginx.conf
 sed -i "s#RELEASE_RANDOMNESS#${RELEASE_RANDOMNESS}#g" /etc/supervisor/conf.d/supervisord.conf
